@@ -1,0 +1,4 @@
+---
+const {eyebrow,title,description}=Astro.props
+---
+<section class="mx-auto max-w-6xl px-6 pb-16 pt-20"><p class="mono mb-5 text-xs uppercase tracking-[.18em] text-[var(--coral)]">{eyebrow}</p><h1 class="max-w-3xl text-5xl font-extrabold leading-none tracking-[-.07em] sm:text-7xl">{title}</h1>{description&&<p class="mt-7 max-w-xl text-lg text-[var(--muted)]">{description}</p>}</section>

@@ -1,0 +1,5 @@
+---
+const path=Astro.url.pathname
+const links=[["/","About"],["/cv","CV"],["/drawings","Drawings"],["/programming","Programming"]]
+---
+<header class="border-b border-[var(--line)]"><div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"><a href="/" class="text-lg font-extrabold">MF<span class="text-[var(--coral)]">.</span></a><nav class="flex gap-1 sm:gap-3">{links.map(([href,label])=><a href={href} class:list={["rounded-full px-3 py-1 text-sm font-semibold",{"bg-white":path===href}]}>{label}</a>)}</nav></div></header>
