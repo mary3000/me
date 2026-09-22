@@ -4,4 +4,20 @@ import Footer from "../components/Footer.astro"
 import "../styles/global.css"
 const {title}=Astro.props
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title} · Maria Feofanova</title></head><body><Header/><main><slot/></main><Footer/></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title} · Maria Feofanova</title></head><body><Header/><img class="dragon-parallax" src="/gallery/dragon.png" alt="" aria-hidden="true" onerror="this.remove()"/><main><slot/></main><Footer/></body></html>
+<script>
+	const dragon = document.querySelector<HTMLImageElement>('.dragon-parallax');
+	if (dragon) {
+		let ticking = false;
+		const updateDragon = () => {
+			dragon.style.transform = `translate3d(0, ${window.scrollY * -0.25}px, 0)`;
+			ticking = false;
+		};
+		window.addEventListener('scroll', () => {
+			if (!ticking) {
+				window.requestAnimationFrame(updateDragon);
+				ticking = true;
+			}
+		}, { passive: true });
+	}
+</script>
