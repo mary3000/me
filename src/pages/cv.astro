@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import PageIntro from "../components/PageIntro.astro"
-const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`
+const resumeUrl = `${base}resume.pdf`
 ---
 <BaseLayout title="CV">
   <PageIntro eyebrow="Experience & practice" title="The long version." description="Software engineer working on reliable systems, developer tools, and distributed computing." />
