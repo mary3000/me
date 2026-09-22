@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import PageIntro from "../components/PageIntro.astro"
+const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
 ---
 <BaseLayout title="CV">
   <PageIntro eyebrow="Experience & practice" title="The long version." description="Software engineer working on reliable systems, developer tools, and distributed computing." />
@@ -11,7 +12,7 @@ import PageIntro from "../components/PageIntro.astro"
       <p class="text-[var(--muted)]">Email: <a href="mailto:mary.fifa3000@gmail.com">mary.fifa3000@gmail.com</a></p>
       <p class="text-[var(--muted)]">Open to remote work: yes</p>
       <p class="text-[var(--muted)]">Github: <a href="https://github.com/mary3000">mary3000</a> | LinkedIn: <a href="https://www.linkedin.com/in/sham42">sham42</a> | Telegram: <a href="https://t.me/sham42">sham42</a></p>
-      <a class="mt-6 inline-block border border-[var(--ink)] px-4 py-2 text-sm font-bold" href="/resume.pdf" download>Download résumé ↓</a>
+      <a class="mt-6 inline-block border border-[var(--ink)] px-4 py-2 text-sm font-bold" href={resumeUrl} download>Download résumé ↓</a>
     </div>
     <div class="space-y-14">
       <section><h2 class="mb-6 text-2xl font-extrabold">Experience</h2><div class="border-t border-[var(--line)]">
