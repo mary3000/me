@@ -5,15 +5,16 @@ const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL :
 const resumeUrl = `${base}resume.pdf`
 ---
 <BaseLayout title="CV">
-  <PageIntro eyebrow="Experience & practice" title="The long version." description="Software engineer working on reliable systems, developer tools, and distributed computing." />
+  <PageIntro title="Curriculum Vitae" description="Backend software engineer passionate about fast but reliable software, and learning about distributed systems and concurrency" downloadUrl={resumeUrl} />
   <div class="cv-page mx-auto max-w-6xl border-t border-[var(--line)] px-6 py-16">
     <div class="mb-14 border-b border-[var(--line)] pb-8">
       <h2 class="text-3xl font-extrabold">Mariia (Mary) Feofanova</h2>
-      <p class="mt-2 text-[var(--muted)]">Immigration status: London, SW visa</p>
-      <p class="text-[var(--muted)]">Email: <a href="mailto:mary.fifa3000@gmail.com">mary.fifa3000@gmail.com</a></p>
-      <p class="text-[var(--muted)]">Open to remote work: yes</p>
-      <p class="text-[var(--muted)]">Github: <a href="https://github.com/mary3000">mary3000</a> | LinkedIn: <a href="https://www.linkedin.com/in/sham42">sham42</a> | Telegram: <a href="https://t.me/sham42">sham42</a></p>
-      <a class="mt-6 inline-block border border-[var(--ink)] px-4 py-2 text-sm font-bold" href={resumeUrl} download>Download résumé ↓</a>
+      <div class="cv-contact-glass mt-4">
+        <p class="text-[var(--muted)]">Immigration status: London, SW visa</p>
+        <p class="text-[var(--muted)]">Email: <a href="mailto:mary.fifa3000@gmail.com">mary.fifa3000@gmail.com</a></p>
+        <p class="text-[var(--muted)]">Open to remote work: yes</p>
+        <p class="text-[var(--muted)]">Github: <a href="https://github.com/mary3000">mary3000</a> | LinkedIn: <a href="https://www.linkedin.com/in/sham42">sham42</a> | Telegram: <a href="https://t.me/sham42">sham42</a></p>
+      </div>
     </div>
     <div class="space-y-14">
       <section><h2 class="mb-6 text-2xl font-extrabold">Experience</h2><div class="border-t border-[var(--line)]">

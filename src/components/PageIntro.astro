@@ -1,4 +1,4 @@
 ---
-const {eyebrow,title,description}=Astro.props
+const {eyebrow,title,description,downloadUrl}=Astro.props
 ---
-<section class="mx-auto max-w-6xl px-6 pb-16 pt-20"><p class="mono mb-5 text-xs uppercase tracking-[.18em] text-[var(--coral)]">{eyebrow}</p><h1 class="max-w-3xl text-5xl font-extrabold leading-none tracking-[-.07em] sm:text-7xl">{title}</h1>{description&&<p class="body-copy mt-7 max-w-xl text-lg text-[var(--muted)]">{description}</p>}</section>
+<section class="mx-auto max-w-6xl px-6 pb-16 pt-20">{eyebrow&&<p class="mono mb-5 text-xs uppercase tracking-[.18em] text-[var(--coral)]">{eyebrow}</p>}<h1 class="page-title">{title}</h1>{description&&<p class="body-copy mt-7 max-w-xl text-lg text-[var(--muted)]">{description}</p>}{downloadUrl&&<a class="body-copy mt-6 inline-flex items-center justify-between rounded-full border border-[var(--line)] bg-white/60 px-4 py-3 text-sm font-medium text-[var(--text)] transition-colors hover:border-[var(--coral)] hover:text-[var(--coral)]" href={downloadUrl} download>Download CV ↓</a>}</section>
